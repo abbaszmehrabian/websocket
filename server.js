@@ -41,7 +41,7 @@ const interval = setInterval(() => {
             return ws.terminate();
         }
         ws.isAlive = false;
-        ws.ping(null, false, true);
+        ws.ping(); // اصلاح شده: فراخوانی متد ping بدون پارامتر اضافی
     });
 }, 30000);
 
